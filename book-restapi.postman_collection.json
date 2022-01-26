@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "6b76ba80-8d7c-4b48-a2c2-971982684d4c",
+		"name": "book-restapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/book-restapi/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"book-restapi",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book-by-id(Passing value directly)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/book-restapi/book-by-id/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"book-restapi",
+						"book-by-id",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book-by-id(Not directly)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/book-restapi/book-by-id/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"book-restapi",
+						"book-by-id",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book-by-author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/book-restapi/book-by-author/:author",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"book-restapi",
+						"book-by-author",
+						":author"
+					],
+					"variable": [
+						{
+							"key": "author",
+							"value": "Kathy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category-RequestParam-directly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/book-restapi/book-by-category/?category=Fiction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"book-restapi",
+						"book-by-category",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Fiction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category-indirectly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/book-restapi/book-by-category/?category=Tech",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"book-restapi",
+						"book-by-category",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Tech"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
